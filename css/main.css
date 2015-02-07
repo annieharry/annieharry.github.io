@@ -1,0 +1,640 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,300italic|IM+Fell+Double+Pica+SC|Varela+Round);
+
+body, html {
+    height: 100%;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    border: 0px;
+    margin: 0px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 300;
+    font-size: 1.3em;
+}
+
+.content {
+    padding: 3em 1em;
+}
+
+/* middle */
+@media only screen and (min-width: 36em) and (max-width: 42em),
+    only screen and (min-height: 20em) and (max-height: 36em) {
+        
+    body {
+        font-size: 1.15em;
+    }
+        
+    .content {
+        padding: 2em 1em;
+    }    
+}
+
+/* small */
+@media only screen and (max-width: 36em),
+    only screen and (max-height: 20em) {
+    body{
+        font-size: 1em;
+    }
+        
+    .content {
+        padding: 1em 1em;
+    }
+}
+
+.fullsize {
+    height: 100%;
+    width: 100%;
+    max-height: 1296px;
+}
+
+.slide {
+    min-height: 50%;   
+}
+
+/* content */
+
+.row {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    max-width: 62.5em;
+    align-content: center;
+}
+
+.row:before, .row:after {
+    content: " ";
+    display: table;
+    clear: both;
+}
+
+.clear:after, .clear:before {
+    content: " ";
+    display: table;
+    clear: both;   
+}
+
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* font stuff */
+
+h1, 
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    color: black;
+    text-rendering: optimizeLegibility;
+    margin-top: 0;
+}
+
+h5,
+h6 {
+    font-weight: 300;
+}
+
+/* large */
+h1, 
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-bottom: 0.5em;
+    line-height: 1.3em;
+}
+
+h1 {
+    font-size: 7em;
+}
+
+h2 {
+    font-size: 3.5em;   
+}
+
+h3 {
+    font-size: 2em;
+}
+
+h4 {
+    font-size: 1.5em;
+}
+
+h5 {
+    font-size: 1.5em;
+}
+
+/* middle */
+@media only screen and (min-width: 36em) and (max-width: 42em),
+    only screen and (min-height: 20em) and (max-height: 36em) {
+        
+    h1, 
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin-bottom: 0.4em;
+        line-height: 1.2em;
+    }
+    
+    h1 {
+        font-size: 5em;
+    }
+
+    h2 {
+        font-size: 2.75em;   
+    }
+    
+    h3 {
+        font-size: 1.8em;
+    }
+
+    h4 {
+        font-size: 1.4em;
+    }
+
+    h5 {
+        font-size: 1.4em;
+    }
+}
+
+/* small */
+@media only screen and (max-width: 36em),
+    only screen and (max-height: 20em) {
+        
+    h1, 
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin-bottom: 0.3em;
+        line-height: 1.2em;
+    }
+
+    h1 {
+        font-size: 2.2em;
+    }
+
+    h2 {
+        font-size: 1.8em;   
+    }
+
+    h3 {
+        font-size: 1.5em;
+    }
+
+    h4 {
+        font-size: 1.3em;
+    }
+
+    h5 {
+        font-size: 1.3em;
+    }
+}
+
+/* title formatting */
+
+#heading h1, 
+#heading h2 {
+    font-family: 'IM Fell Double Pica SC', serif;
+    color: white;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4);
+}
+
+#heading h1 {
+    text-align: center;
+}
+
+#heading h2 {
+    text-align: right;
+}
+
+#title {
+    position: relative;
+}
+
+#heading {
+    bottom: 0px;
+    position: absolute;
+    width: 100%;
+}
+
+#headingdownarrow {
+    width: 100%;
+    bottom: 0px;
+    position: absolute;
+}
+
+#headingdownarrow a {
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    color: rgba(0,0,0,0.4);
+}
+
+#headingdownarrow a .down {
+    transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    position: absolute;
+    font-family: "Varela Round", sans-serif;
+}
+
+#headingdownarrow a:hover {
+    color: #FFF;
+    text-shadow: 0px 0px 15px rgb(119, 119, 119);
+}
+
+#headingdownarrow a .background {
+    position: absolute;
+    width: 100%;
+    height: inherit;
+    display: block;
+    background-color: rgba(255,255,255,0.2);
+    
+    opacity: 0;
+    
+    transition: opacity .2s;
+}
+
+#headingdownarrow a .background:hover {
+    opacity: 1;
+}
+
+/* large */
+#heading {
+    padding-bottom: 5em;
+    padding-left: 5em;
+    padding-right: 5em;
+}
+
+#headingdownarrow {
+    height: 4.5em;
+}
+
+#headingdownarrow a {
+    height: 4.5em;
+}
+
+#headingdownarrow a .down {
+    font-size: 8em;
+    line-height: 0.55em;
+}
+
+/* middle */
+@media only screen and (min-width: 32em) and (max-width: 42em),
+    only screen and (min-height: 24em) and (max-height: 36em) {
+
+    #heading {
+        padding-bottom: 4em;
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+    
+    #headingdownarrow {
+        height: 3.5em;
+    }
+    
+    #headingdownarrow a {
+        height: 3.5em;
+    }
+    
+    #headingdownarrow a .down {
+        font-size: 6em;
+        line-height: 0.55em;
+    }
+}
+
+/* small */
+@media only screen and (max-width: 32em),
+    only screen and (max-height: 24em) {
+    
+    #heading {
+        padding-bottom: 2em;
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+    
+    #headingdownarrow {
+        height: 1.5em;
+    }
+    
+    #headingdownarrow a {
+        height: 1.5em;
+    }
+    
+    #headingdownarrow a .down {
+        font-size: 3em;
+        line-height: 0.45em;
+    }
+    
+}
+
+.shadow {
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 -2px 4px rgba(0,0,0,0.12);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 -2px 4px rgba(0,0,0,0.12);
+}
+
+.innershadow {
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12) inset, 0 -2px 4px rgba(0,0,0,0.12) inset;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12) inset, 0 -2px 4px rgba(0,0,0,0.12) inset;    
+}
+
+/* links */
+
+a,a:visited {   
+    font-weight: 400;
+    text-decoration: none;
+    color: #3989A8;
+    text-transform: uppercase;
+}
+
+a:hover {
+    color: #000;
+}
+
+p a {
+    font-size: 0.8em;
+}
+
+/* welcome */
+
+.signature {
+    padding-left: 2em;
+}
+
+/* navigation */
+
+#navigation {
+    font-size: 0.8em;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+/* navigation is always full size */
+.nav-4 {
+    position: relative;
+    width: 25%;
+    padding: 0em 0.3em;
+}
+
+/* directions */
+
+#directions {
+    background-color: #B9F6FF;
+}
+
+/* venue */
+
+#venue {
+    background-color: #80CBE8;
+}
+
+/* hotels */
+
+#hotelsmap {
+    padding-top: 0px;
+}
+
+/* aspect ratio */
+
+.aspect_box {
+    position: relative;
+    width: 100%;
+}
+
+.aspect_box:before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+}
+
+.aspect_content {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.aspect_ratio2_1:before {
+    padding-top: 50%;
+}
+
+.aspect_ratio1_2:before {
+    padding-top: 200%;
+}
+
+.aspect_ratio4_3:before {
+    padding-top: 75%;
+}
+
+.aspect_ratio6_9: before {
+    padding-top: 56.25%;
+}
+
+.aspect_ratio66:before {
+    padding-top: 66.47%;
+}
+
+/* map */
+
+.map {
+    border: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* footer */
+
+#footer {
+    background-color: #3989A8;
+    color: #FFF;
+    font-size: 0.8em;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+#footertext {
+    text-align: center;
+    font-size: 0.7em;
+}
+
+#footer section {
+    padding-left: 3em;
+    padding-right: 3em;
+}
+
+#footer h4 {
+    font-size: 1.2em;
+    color: #FFF;
+}
+
+#footer a {
+    text-decoration: none;
+    color: #CCC;
+}
+
+#footer a:hover {
+    color: #EEE;
+}
+
+/* columns */
+
+#hotelcolumns > div {
+    min-height: 18em;
+}
+
+@media only screen {
+    
+    .column {
+        float: left;
+        padding: 0.9em 0em;
+        position: relative;
+    }
+    
+    .large-2 {
+        position: relative;
+        width: 100%;
+    }
+    
+    .large-3 {
+        position: relative;
+        width: 100%;
+    }
+    
+    .large-4 {
+        position: relative;
+        width: 100%;
+    }
+}
+
+/* medium screen */
+
+@media only screen and (min-width: 24em) and (max-width: 48em) {
+    
+    /* 4 columns become 2 columns */
+    
+    .large-4 {
+        position: relative;
+        width: 50%;
+        padding: 0.9em;
+    }
+    
+    .content .large-4:nth-child(2n+1) {
+        padding-left: 0px;
+    }
+    
+    .content .large-4:nth-child(2n+0) {
+        padding-right: 0px;
+    }
+
+    .content .large-4:nth-child(2n+1):before {
+        content: " ";
+        display: table;
+        clear: both;
+    }
+    
+}
+
+@media only screen and (min-width: 33em) {
+    /* when screen is > 30em */
+    
+    /* 3 columns are full width */
+    
+    .large-3 {
+        position: relative;
+        width: 33.33333%;
+        padding: 0em 0.9em;
+    }
+    
+    .content .large-3:nth-child(3n+1) {
+        padding-left: 0px;
+    }
+    
+    .content .large-3:nth-child(3n+0) {
+        padding-right: 0px;
+    }
+    
+    .content .large-3:nth-child(3n+0):before{
+        content: " ";
+        display: table;
+        clear: both;
+    }    
+    
+}
+
+/* full size */
+
+@media only screen and (min-width: 48em) {
+    /* when screen is > 48 em*/
+    
+    /* 2 columns are full width */
+    /* 4 columns are full width */
+    
+    .large-2 {
+        position: relative;
+        width: 50%;
+        padding: 0em 0.9em;
+    }
+    
+    .large-4 {
+        position: relative;
+        width: 25%;
+        padding: 0em 0.9em;
+    }
+    
+    .content .large-2:nth-child(2n+1),
+    .content .large-4:nth-child(4n+1) {
+        padding-left: 0px;
+    }
+    
+    .content .large-2:nth-child(2n+0),
+    .content .large-4:nth-child(4n+0) {
+        padding-right: 0px;
+    }
+    
+    .content .large-2:nth-child(2n+1):before,
+    .content .large-4:nth-child(4n+1):before{
+        content: " ";
+        display: table;
+        clear: both;
+    }
+}
+
+/* images */
+
+#title {
+    background: url(../img/header_background.jpg) no-repeat center center;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min-device-pixel-ratio: 2) {
+    #title {
+        /* Reference the 2x Sprite */
+        background-image: url(../img/header_background_web@2x.jpg);
+        /* Translate the 2x sprite's dimensions back to 1x */
+        background-size: 1944px 1296px;
+    }
+}
+
+@media print {
+     #main-content a[href]:after { " (" attr(href) ") "; }
+}
+
